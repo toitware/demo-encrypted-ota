@@ -15,7 +15,7 @@ all: build/ota.bin
 build/firmware.envelope: build/firmware.envelope.gz
 	gunzip -c $< > $@
 
-build/firmware.envelope.gz: build
+build/firmware.envelope.gz:
 	mkdir -p build
 	curl -L -o $@ $(ENVELOPE_URL)
 
